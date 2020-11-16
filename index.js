@@ -1,11 +1,11 @@
 const express = require('express');
 
-const myFunctions = require('./functions.js'); 
+const myFunctions = require('./functions.js'); // custom module with all the necessary functions
 
 const app = express();
 
 app.use((req, res, next) => {
-    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Origin', '*'); // To prevent blocking by CORS policy
     next();
 });
 
@@ -14,9 +14,9 @@ app.get('/', (req, res) => {
     
     promisedWordList.then(wordList => {
         
-        const newPromisedWordsList = myFunctions.generateYandexWordList(wordList).catch(error => console.error("This was the error while generating the new List ", error));
+        const finalPromisedWordsList = myFunctions.generateYandexWordList(wordList).catch(error => console.error("This was the error while generating the new List ", error));
         
-        newPromisedWordsList.then(wordsList => {
+        finalPromisedWordsList.then(wordsList => {
             console.log("New Word List: ", wordsList);
         });
     });
