@@ -2,7 +2,7 @@
 
 ### How to run this assignment locally:
 
-1)Make sure you have **node.js** installed on your OS. If not, get the latest recommended version from the [official website here](https://nodejs.org/en/){:target="_blank" rel="noopener"}.
+1)Make sure you have **node.js** installed on your OS. If not, get the latest recommended version from the [official website here](https://nodejs.org/en/).
 
 2)Download or clone the repository under any directory in your local machine.
 
