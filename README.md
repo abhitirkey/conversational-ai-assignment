@@ -1,5 +1,7 @@
 ## conversational-ai-assignment
 
+### View the assignment live on [Glitch](https://harmless-ink-age.glitch.me/) (wait for page to fetch and load data): 
+
 ### How to run this assignment locally:
 
 1) Make sure you have **node.js** installed on your OS. If not, get the latest recommended version from the [official website here](https://nodejs.org/en/).
