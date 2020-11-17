@@ -6,6 +6,8 @@ require('dotenv').config();
 
 const app = express();
 
+app.set('view engine', 'ejs');
+
 app.use((req, res, next) => {
     res.header('Access-Control-Allow-Origin', '*'); // To prevent blocking by CORS policy
     next();
@@ -22,7 +24,14 @@ app.get('/', (req, res) => {
         const finalPromisedWordsList = myFunctions.generateYandexWordList(wordList).catch(error => console.error("This was the error while generating the new List ", error));
         
         finalPromisedWordsList.then(wordsList => {
-            console.log("New Word List: ", wordsList);
+
+            try{
+                console.log("New Word List: ", wordsList);
+                res.render('index.ejs', {myText : JSON.stringify(wordsList, undefined, 4)});
+            }catch(error){
+                console.error("Error in processing and displaying word list...", error);
+            }
+            
         });
     });
 });
