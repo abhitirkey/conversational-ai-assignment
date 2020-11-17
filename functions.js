@@ -1,4 +1,5 @@
 const fetch = require('node-fetch'); // This module is necessary to use the windows.fetch command to make API requests
+require('dotenv').config();
 
 async function getText(){
 
@@ -20,8 +21,10 @@ async function generateYandexWordList(wordList){
     
     let newWordList = [];
     let tr_array, syn_array, word_details, pos;
+    const api_key = process.env.API_KEY;
+
     for(item of wordList){
-        const response = await fetch("https://dictionary.yandex.net/api/v1/dicservice.json/lookup?key=dict.1.1.20170610T055246Z.0f11bdc42e7b693a.eefbde961e10106a4efa7d852287caa49ecc68cf&lang=en-en&text="+item.word);
+        const response = await fetch(`https://dictionary.yandex.net/api/v1/dicservice.json/lookup?key=${api_key}&lang=en-en&text=${item.word}`);
         const responseJSON = await response.json();
         
         word_details = responseJSON.def[0];

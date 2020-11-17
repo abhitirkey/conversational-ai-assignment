@@ -10,10 +10,13 @@ app.use((req, res, next) => {
 });
 
 app.get('/', (req, res) => {
+
+    // First, get the list of top 10 words in decreasing order of frequency
     const promisedWordList = myFunctions.getText().catch(error => console.error("This was the error that took place", error));
     
     promisedWordList.then(wordList => {
         
+        // Fetch details for each of the 10 words using the yandex API and generate a new JSON object with required info
         const finalPromisedWordsList = myFunctions.generateYandexWordList(wordList).catch(error => console.error("This was the error while generating the new List ", error));
         
         finalPromisedWordsList.then(wordsList => {
