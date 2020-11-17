@@ -2,7 +2,7 @@
 
 ### How to run this assignment locally:
 
-1)Make sure you have node.js installed on your OS. If not, get the latest recommended version from the official website here: https://nodejs.org/en/
+1)Make sure you have node.js installed on your OS. If not, get the latest recommended version from the official website [here](https://nodejs.org/en/).
 
 2)Download or clone the repository under any directory in your local machine.
 
@@ -15,13 +15,13 @@
 6)Run the following command in the command prompt (or terminal) to install the necessary node modules:
 <br>
     ```
-    npm install
+       npm install
     ```
 <br>
 7)Next, run the command to start the project:
 <br>
     ```
-    npm start
+       npm start
     ```
 <br>
 8)To initiate the data fetching and parsing process run localhost:4000 in any browser. 
