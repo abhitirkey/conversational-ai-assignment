@@ -15,13 +15,13 @@
 6)Run the following command in the command prompt (or terminal) to install the necessary node modules:
 <br>
     ```
-       &nbsp;&nbsp;&nbsp;npm install
+       npm install
     ```
 <br><br>
 7)Next, run the command to start the project:
 <br>
     ```
-       &nbsp;&nbsp;&nbsp;npm start
+       npm start
     ```
 <br><br>
 8)To initiate the data fetching and parsing process run localhost:4000 in any browser. 
