@@ -2,6 +2,8 @@ const express = require('express');
 
 const myFunctions = require('./functions.js'); // custom module with all the necessary functions
 
+require('dotenv').config();
+
 const app = express();
 
 app.use((req, res, next) => {
@@ -25,7 +27,9 @@ app.get('/', (req, res) => {
     });
 });
 
-app.listen(4000, () => {
-    console.log("Listening on localhost:4000");
-})
+const port = process.env.PORT || 4000
+
+app.listen(port, () => {
+    console.log(`Listening on ${port}`);
+});
 
