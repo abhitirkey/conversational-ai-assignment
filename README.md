@@ -15,15 +15,15 @@
 6)Run the following command in the command prompt (or terminal) to install the necessary node modules:
 <br>
     ```
-       npm install
+       &nbsp;&nbsp;&nbsp;npm install
     ```
-<br>
+<br><br>
 7)Next, run the command to start the project:
 <br>
     ```
-       npm start
+       &nbsp;&nbsp;&nbsp;npm start
     ```
-<br>
+<br><br>
 8)To initiate the data fetching and parsing process run localhost:4000 in any browser. 
 
 9)Wait until the parsed JSON data is displayed in either command prompt (terminal) or the browser's console.
