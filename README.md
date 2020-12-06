@@ -1,5 +1,7 @@
 ## conversational-ai-assignment
 
+Interview assignment to retrieve top 10 recurring words in a random text file, along with word count and synonyms. Written using Node.js and Express.js, while using the Yandex dictionary API to retrieve synonyms of words.
+
 ### View the assignment live on [Glitch](https://harmless-ink-age.glitch.me/) (wait for page to fetch and load data): 
 
 ### How to run this assignment locally:
